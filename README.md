@@ -39,6 +39,6 @@ A situação pode ser
     • Situação financeira
 
 ## ⭐ Bônus
-• Permitir alterar a situação de uma pessoa
-• Mostrar quantas pessoas estão “Pagas” e quantas estão “Atrasadas”
-• Impedir IDs duplicados
+    - Permitir alterar a situação de uma pessoa
+    - Mostrar quantas pessoas estão “Pagas” e quantas estão “Atrasadas”
+    - Impedir IDs duplicados
