@@ -1,5 +1,19 @@
 # ⚡ Desafio da Semana: Sistema de Situação Cadastral
 
+## Notas
+
+Ainda não esta pronto, provavelmente vou terminar na sexta (29/05/2026);
+
+### como rodar
+
+no linux basta abir o projeto e rodar o comando make
+
+no windos voce deve baixar um compilador de C no windows e rodar ele apontando para a pasta src;
+ou se achar mais fácil, use uma IDE específica para C como o CODEBLOCKS
+você pode tentar usar o VSCODE também, mas não recomendo
+
+## Desafio
+
 Crie um programa que gerencie cadastros de pessoas.
 
 Cada cadastro deve possuir
