@@ -28,10 +28,10 @@ A situação pode ser
     • “Atrasado”
 
 ## 📌 O programa deve ter as seguintes opções
-• Ver todos os IDs cadastrados
-• Procurar um ID específico
-• Adicionar um novo cadastro
-• Remover um cadastro
+    • Ver todos os IDs cadastrados
+    • Procurar um ID específico
+    • Adicionar um novo cadastro
+    • Remover um cadastro
 
 ## 📌 Ao procurar um ID, o programa deve mostrar
     • ID
