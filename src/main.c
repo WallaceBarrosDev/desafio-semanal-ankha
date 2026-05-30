@@ -152,6 +152,17 @@ int alterate_status(int id) {
   return -1;
 }
 
+void show_relationship_status() {
+  int q_paid = 0, q_late = 0;
+
+  for(int i = 0; i < db->size; i++) {
+    db->users[i].status == PAID ? q_paid++ : q_late++;
+  }
+
+  printf("Contas pagas: %d\n", q_paid);
+  printf("Contas atrasadas: %d\n", q_late);
+}
+
 void interface() {
   int run = 1;
   printf("Bem vindo ao Sistema de Sintuação Cadastral\n");
@@ -215,7 +226,8 @@ void interface() {
       break;
 
       case 5:
-        
+        printf("\033[9A\033[0J");
+        show_relationship_status();
       break;
       
       case 6:
