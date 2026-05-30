@@ -53,16 +53,21 @@ void register_new_user(User user) {
   db->size += 1;
 }
 
+void print_user(User user) {
+  printf("Id: %d, Nome: %s, Situação Financeira: %s\n", 
+    user.id, user.name, user.status == PAID ? "Paid" : "Late");
+}
+
 void show_users() {
   if (db->size <= 0) {
     printf("Banco de dados vazio\n");
     return;
   }
   for(int i = 0; i < db->size; i++) {
-    printf("Id: %d, Nome: %s, Situação Financeira: %s\n", 
-        db->users[i].id, db->users[i].name, db->users[i].status == PAID ? "Paid" : "Late");
+    print_user(db->users[i]);
   }
 }
+
 
 void get_user_by_id(int id) {
   if (db->size <= 0) {
@@ -72,8 +77,7 @@ void get_user_by_id(int id) {
 
   for(int i = 0; i < db->size; i++) {
     if (db->users[i].id == id) {
-      printf("Id: %d, Nome: %s, Situação Financeira: %s\n", 
-        db->users[i].id, db->users[i].name,  db->users[i].status == PAID ? "Paid" : "Late");
+      print_user(db->users[i]);
       return;
     }
   }
@@ -99,7 +103,7 @@ void remove_user_by_id(int id) {
   printf("Nao encontrado\n");
 }
 
-int validadate_input() {
+int validate_input() {
   char input[255];
   char *temp;
   int valid_input;
@@ -123,7 +127,7 @@ void interface_new_user() {
   scanf("%s", name);
 
   printf("Status\n1 - Paid\n2 - Late\n> ");
-  status = validadate_input();
+  status = validate_input();
   printf("%d", status);
 
   if (status != PAID && status != LATE) {
@@ -136,6 +140,18 @@ void interface_new_user() {
   register_new_user(user);
 }
 
+int alterate_status(int id) {
+  for(int i = 0; i < db->size; i++) {
+    if(id == db->users[i].id) {
+      print_user(db->users[i]);
+      printf("\nDigite o novo status do usuário\n1 - PAID\n2 - LATE\n");
+      return i;
+    }
+  }
+
+  return -1;
+}
+
 void interface() {
   int run = 1;
   printf("Bem vindo ao Sistema de Sintuação Cadastral\n");
@@ -146,10 +162,12 @@ void interface() {
     printf("1 - Cadastrar novo usuario\n");
     printf("2 - Listar todos os usuarios\n");
     printf("3 - Buscar usuario por id\n");
-    printf("4 - Remover usuario por id\n");
-    printf("5 - Sair\n\n> ");
+    printf("4 - Alterar sintuação financeira de um usuario por id\n");
+    printf("5 - Relação de contas pagas e atrasadas\n");
+    printf("6 - Remover usuario por id\n");
+    printf("7 - Sair\n\n> ");
     
-    int option = validadate_input(), id;
+    int option = validate_input(), id, i;
     char name[255];
     
     switch(option) {
@@ -166,18 +184,48 @@ void interface() {
       case 3:
         printf("\033[9A\033[0J");
         printf("Digite o id: ");
-        id = validadate_input();
+        id = validate_input();
         get_user_by_id(id);
       break;
-      
+
       case 4:
         printf("\033[9A\033[0J");
         printf("Digite o id: ");
-        id = validadate_input();
+        id = validate_input();
+        i = alterate_status(id);
+        
+        if (i < 0) {
+          printf("Usuário não encontrado\n");
+          break;
+        };
+        
+        while(1) {
+          Status novo_status = validate_input();
+          
+          if(novo_status != PAID && novo_status != LATE) {
+            printf("Opcão invalida\n");
+            continue;
+          }
+          
+          printf("Status alterado\n");
+          db->users[i].status = novo_status;
+          get_user_by_id(id);
+          break;
+        }
+      break;
+
+      case 5:
+        
+      break;
+      
+      case 6:
+        printf("\033[9A\033[0J");
+        printf("Digite o id: ");
+        id = validate_input();
         remove_user_by_id(id);
       break;
       
-      case 5:
+      case 7:
         run = 0;
       break;
 
