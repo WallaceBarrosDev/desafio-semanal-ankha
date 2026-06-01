@@ -1,46 +1,40 @@
-# ⚡ Desafio da Semana: Sistema de Situação Cadastral
+# ⚡ Desafio da Semana: Sistema de Conta Bancária
 
-## Notas
+## Fases do projeto
 
-No geral ta finalizado, so não tem uma interface muito agradavel.
+- [ ] Definir requisitos
+- [ ] Definir task
+- [ ] Implementação
 
-### como rodar
+Crie um programa que simule o funcionamento básico de uma conta bancária.
 
-no linux basta abir o projeto e rodar o comando make
+## Cada conta deve possuir
+    • Usuário
+    • Senha
+    • Saldo (em R$ ou €)
 
-no windos voce deve baixar um compilador de C no windows e rodar ele apontando para a pasta src;
+## 📌 Antes de acessar o sistema
+    • O usuário deve informar usuário e senha
+    • O sistema deve permitir apenas um número limitado de tentativas de login
+    • Ao atingir o limite, o acesso deve ser bloqueado
 
-ou se achar mais fácil, use uma IDE específica para C como o CODEBLOCKS;
+## 📌 Após o login, exiba um menu com as opções
+    • Consultar saldo
+    • Depositar dinheiro
+    • Sacar dinheiro
+    • Encerrar sessão
 
-você pode tentar usar o VSCODE também, mas não recomendo;
+## 📌 Regras do sistema
+    • O saldo deve ser exibido em reais (R$)
+    • Não é permitido sacar valores maiores que o saldo disponível
+    • A conta nunca pode ficar negativa
+    • Depósitos e saques devem atualizar o saldo corretamente
 
-## Desafio
-
-Crie um programa que gerencie cadastros de pessoas.
-
-Cada cadastro deve possuir
-
-    • ID
-    • Nome da pessoa
-    • Situação financeira
-
-A situação pode ser
-
-    • “Pago”
-    • “Atrasado”
-
-## 📌 O programa deve ter as seguintes opções
-    • Ver todos os IDs cadastrados
-    • Procurar um ID específico
-    • Adicionar um novo cadastro
-    • Remover um cadastro
-
-## 📌 Ao procurar um ID, o programa deve mostrar
-    • ID
-    • Nome da pessoa
-    • Situação financeira
+## 📌 Ao consultar o saldo, o programa deve mostrar
+    • Nome do usuário
+    • Saldo atual em R$
 
 ## ⭐ Bônus
-    - Permitir alterar a situação de uma pessoa
-    - Mostrar quantas pessoas estão “Pagas” e quantas estão “Atrasadas”
-    - Impedir IDs duplicados
+    • Mostrar um histórico das operações realizadas
+    • Exibir a quantidade total de depósitos e saques realizados
+    • Em caso de bloqueio, definir um time para realizar entrada novamente
