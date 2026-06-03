@@ -3,7 +3,7 @@
 ## Fases do projeto
 
 - [x] Definir requisitos
-- [ ] Definir task
+- [x] Definir task
 - [ ] Implementação
 
 Crie um programa que simule o funcionamento básico de uma conta bancária.
@@ -46,152 +46,152 @@ Crie um programa que simule o funcionamento básico de uma conta bancária.
 ### US01 – Abrir Conta
 
 #### TASK-01 – Criar estrutura da entidade Cliente
-- Definir atributos do cliente.
-- Implementar construtor da entidade.
-- Validar dados obrigatórios.
+- [ ] Definir atributos do cliente.
+- [ ] Implementar construtor da entidade.
+- [ ] Validar dados obrigatórios.
 
 #### TASK-02 – Criar estrutura da entidade Conta
-- Definir número da conta.
-- Definir saldo inicial.
-- Associar conta ao cliente.
+- [ ] Definir número da conta.
+- [ ] Definir saldo inicial.
+- [ ] Associar conta ao cliente.
 
 #### TASK-03 – Implementar validação cadastral
-- Validar nome.
-- Validar CPF.
-- Validar e-mail.
-- Validar senha.
+- [ ] Validar nome.
+- [ ] Validar CPF.
+- [ ] Validar e-mail.
+- [ ] Validar senha.
 
 #### TASK-04 – Implementar abertura de conta
-- Receber dados do cliente.
-- Executar validações.
-- Criar conta.
-- Persistir dados.
+- [ ] Receber dados do cliente.
+- [ ] Executar validações.
+- [ ] Criar conta.
+- [ ] Persistir dados.
 
 #### TASK-05 – Implementar mensagens de erro
-- Informar dados inválidos.
-- Informar campos obrigatórios.
+- [ ] Informar dados inválidos.
+- [ ] Informar campos obrigatórios.
 
 ---
 
 ### US02 – Fazer Login
 
 #### TASK-06 – Implementar autenticação
-- Receber credenciais.
-- Localizar cliente.
-- Validar senha.
+- [ ] Receber credenciais.
+- [ ] Localizar cliente.
+- [ ] Validar senha.
 
 #### TASK-07 – Implementar controle de sessão
-- Criar sessão autenticada.
-- Registrar usuário logado.
+- [ ] Criar sessão autenticada.
+- [ ] Registrar usuário logado.
 
 #### TASK-08 – Implementar tratamento de falhas de login
-- Detectar usuário inexistente.
-- Detectar senha incorreta.
-- Exibir mensagens apropriadas.
+- [ ] Detectar usuário inexistente.
+- [ ] Detectar senha incorreta.
+- [ ] Exibir mensagens apropriadas.
 
 ---
 
 ### US03 – Consultar Saldo
 
 #### TASK-09 – Implementar consulta de saldo
-- Recuperar saldo da conta.
-- Exibir valor atualizado.
+- [ ] Recuperar saldo da conta.
+- [ ] Exibir valor atualizado.
 
 #### TASK-10 – Proteger acesso à consulta
-- Verificar autenticação.
-- Bloquear acesso não autorizado.
+- [ ] Verificar autenticação.
+- [ ] Bloquear acesso não autorizado.
 
 ---
 
 ### US04 – Fazer Depósito
 
 #### TASK-11 – Implementar operação de depósito
-- Receber valor.
-- Validar valor informado.
-- Atualizar saldo.
+- [ ] Receber valor.
+- [ ] Validar valor informado.
+- [ ] Atualizar saldo.
 
 #### TASK-12 – Validar valor do depósito
-- Impedir valores negativos.
-- Impedir valor zero.
+- [ ] Impedir valores negativos.
+- [ ] Impedir valor zero.
 
 #### TASK-13 – Confirmar operação
-- Exibir novo saldo.
-- Informar sucesso da operação.
+- [ ] Exibir novo saldo.
+- [ ] Informar sucesso da operação.
 
 ---
 
 ### US05 – Fazer Saque
 
 #### TASK-14 – Implementar operação de saque
-- Receber valor solicitado.
-- Verificar saldo.
-- Atualizar saldo.
+- [ ] Receber valor solicitado.
+- [ ] Verificar saldo.
+- [ ] Atualizar saldo.
 
 #### TASK-15 – Implementar validação de saldo
-- Comparar saldo disponível.
-- Autorizar ou negar saque.
+- [ ] Comparar saldo disponível.
+- [ ] Autorizar ou negar saque.
 
 #### TASK-16 – Validar valor do saque
-- Impedir saque negativo.
-- Impedir saque igual a zero.
+- [ ] Impedir saque negativo.
+- [ ] Impedir saque igual a zero.
 
 #### TASK-17 – Confirmar operação
-- Exibir saldo atualizado.
-- Informar sucesso da operação.
+- [ ] Exibir saldo atualizado.
+- [ ] Informar sucesso da operação.
 
 ---
 
 ### US06 – Saldo Insuficiente
 
 #### TASK-18 – Implementar tratamento de saldo insuficiente
-- Detectar insuficiência de saldo.
-- Cancelar operação.
+- [ ] Detectar insuficiência de saldo.
+- [ ] Cancelar operação.
 
 #### TASK-19 – Implementar mensagens de erro
-- Informar motivo da falha.
-- Orientar nova tentativa.
+- [ ] Informar motivo da falha.
+- [ ] Orientar nova tentativa.
 
 ---
 
 ### US07 – Encerrar Sessão
 
 #### TASK-20 – Implementar logout
-- Encerrar sessão ativa.
-- Limpar dados de autenticação.
+- [ ] Encerrar sessão ativa.
+- [ ] Limpar dados de autenticação.
 
 #### TASK-21 – Bloquear operações após logout
-- Exigir nova autenticação.
-- Impedir acesso às funcionalidades protegidas.
+- [ ] Exigir nova autenticação.
+- [ ] Impedir acesso às funcionalidades protegidas.
 
 ---
 
 ## Infraestrutura e Qualidade
 
 #### TASK-22 – Criar estrutura do projeto
-- Organizar diretórios.
-- Definir responsabilidades das classes.
+- [ ] Organizar diretórios.
+- [ ] Definir responsabilidades das classes.
 
 #### TASK-23 – Implementar persistência de dados
-- Salvar clientes.
-- Salvar contas.
-- Recuperar informações.
+- [ ] Salvar clientes.
+- [ ] Salvar contas.
+- [ ] Recuperar informações.
 
 #### TASK-24 – Criar testes unitários
-- Testar abertura de conta.
-- Testar login.
-- Testar consulta de saldo.
-- Testar depósito.
-- Testar saque.
-- Testar logout.
+- [ ] Testar abertura de conta.
+- [ ] Testar login.
+- [ ] Testar consulta de saldo.
+- [ ] Testar depósito.
+- [ ] Testar saque.
+- [ ] Testar logout.
 
 #### TASK-25 – Criar tratamento global de erros
-- Centralizar mensagens.
-- Padronizar exceções.
+- [ ] Centralizar mensagens.
+- [ ] Padronizar exceções.
 
 #### TASK-26 – Documentar regras de negócio
-- Fluxo de abertura de conta.
-- Fluxo de autenticação.
-- Fluxo de movimentação financeira.
+- [ ] Fluxo de abertura de conta.
+- [ ] Fluxo de autenticação.
+- [ ] Fluxo de movimentação financeira.
 
 ## User Stories
 
