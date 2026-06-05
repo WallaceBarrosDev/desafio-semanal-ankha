@@ -46,45 +46,62 @@ Crie um programa que simule o funcionamento básico de uma conta bancária.
 ### US01 – Abrir Conta
 
 #### TASK-01 – Criar estrutura da entidade Cliente
-- [ ] Definir atributos do cliente.
-- [ ] Implementar construtor da entidade.
-- [ ] Validar dados obrigatórios.
+
+- [x] Definir atributos do cliente.
+- [x] Implementar construtor da entidade.
+- [x] Validar dados obrigatórios.
 
 #### TASK-02 – Criar estrutura da entidade Conta
-- [ ] Definir número da conta.
-- [ ] Definir saldo inicial.
-- [ ] Associar conta ao cliente.
+
+- [x] Definir atributos da conta.
+- [x] Implementar construtor da entidade.
+- [x] Implementar método de saque.
+- [x] Implementar método de depósito.
+- [x] Implementar método de consulta de saldo.
 
 #### TASK-03 – Implementar validação cadastral
-- [ ] Validar nome.
-- [ ] Validar CPF.
-- [ ] Validar e-mail.
-- [ ] Validar senha.
+
+- [x] Validar nome.
+- [x] Validar e-mail.
+- [x] Validar senha.
 
 #### TASK-04 – Implementar abertura de conta
-- [ ] Receber dados do cliente.
-- [ ] Executar validações.
-- [ ] Criar conta.
-- [ ] Persistir dados.
+
+- [x] Receber dados do cliente.
+- [x] Executar validações.
+- [x] Criar conta.
+- [x] Persistir dados.
 
 #### TASK-05 – Implementar mensagens de erro
-- [ ] Informar dados inválidos.
-- [ ] Informar campos obrigatórios.
+
+- [x] Informar dados inválidos.
+- [x] Informar campos obrigatórios.
+
+#### Extra - Implementação do peseudo database
+
+- [x] Criar estrutura e atributos.
+- [x] Implementar Construtor.
+- [x] Criação de usuário.
+- [x] Criação de conta.
+- [x] acosiação de conta ao usuário.
 
 ---
 
 ### US02 – Fazer Login
 
 #### TASK-06 – Implementar autenticação
+
 - [ ] Receber credenciais.
 - [ ] Localizar cliente.
 - [ ] Validar senha.
 
 #### TASK-07 – Implementar controle de sessão
+
 - [ ] Criar sessão autenticada.
 - [ ] Registrar usuário logado.
 
 #### TASK-08 – Implementar tratamento de falhas de login
+
 - [ ] Detectar usuário inexistente.
 - [ ] Detectar senha incorreta.
 - [ ] Exibir mensagens apropriadas.
@@ -202,11 +219,12 @@ Crie um programa que simule o funcionamento básico de uma conta bancária.
 **Para que** eu possa acessar os serviços bancários do sistema.
 
 #### Critérios de Aceitação
-- O sistema deve solicitar os dados cadastrais obrigatórios.
-- O sistema deve validar os dados informados.
-- O sistema deve criar uma conta quando os dados forem válidos.
-- O sistema deve exibir uma confirmação após a criação da conta.
-- O sistema deve informar erros quando os dados forem inválidos.
+
+- [x] O sistema deve solicitar os dados cadastrais obrigatórios.
+- [x] O sistema deve validar os dados informados.
+- [x] O sistema deve criar uma conta quando os dados forem válidos.
+- [x] O sistema deve exibir uma confirmação após a criação da conta.
+- [x] O sistema deve informar erros quando os dados forem inválidos.
 
 ---
 
