@@ -17,6 +17,7 @@ struct ClientDatabase {
 void newClientDatabase(int max_size);
 void destroyClientDatabase();
 void addClient(Client *newClient, int accountNumber);
+Client *getClientByEmail(char *inputEmail);
 
 typedef struct AccountDatabase AccountDatabase;
 
@@ -29,5 +30,6 @@ struct AccountDatabase {
 void newAccountDatabase(int max_size);
 void destroyAccountDatabase();
 void addAccount(BankAccount *newAccount);
+BankAccount *getAccount(int accountNumber);
 
 #endif

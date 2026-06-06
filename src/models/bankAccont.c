@@ -4,7 +4,7 @@ float withdraw(BankAccount *account, float value);
 void deposit(BankAccount *account, float value);
 float print_balance(BankAccount *account);
 
-BankAccount *newBankAccount(int clientId) {
+BankAccount *newBankAccount() {
   BankAccount *bankAccount = malloc(sizeof(BankAccount));
   bankAccount->number = 0;
   bankAccount->balance = 0;

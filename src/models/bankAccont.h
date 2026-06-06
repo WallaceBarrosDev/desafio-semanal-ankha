@@ -16,6 +16,6 @@ struct BankAccount {
   float (*print_balance)(BankAccount *account);
 };
 
-BankAccount *newBankAccount(int clientId);
+BankAccount *newBankAccount();
 
 #endif

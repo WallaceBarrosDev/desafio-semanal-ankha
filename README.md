@@ -43,7 +43,7 @@ Crie um programa que simule o funcionamento básico de uma conta bancária.
 
 ## 📌 Task
 
-### US01 – Abrir Conta
+### TASK01 – Abrir Conta
 
 #### TASK-01 – Criar estrutura da entidade Cliente
 
@@ -87,35 +87,37 @@ Crie um programa que simule o funcionamento básico de uma conta bancária.
 
 ---
 
-### US02 – Fazer Login
+### TASKUS02 – Fazer Login
 
 #### TASK-06 – Implementar autenticação
 
-- [ ] Receber credenciais.
-- [ ] Localizar cliente.
-- [ ] Validar senha.
+- [x] Receber credenciais.
+- [x] Localizar cliente.
+- [x] Validar senha.
 
 #### TASK-07 – Implementar controle de sessão
 
-- [ ] Criar sessão autenticada.
-- [ ] Registrar usuário logado.
+- [x] Criar sessão autenticada.
+- [x] Registrar usuário logado.
 
 #### TASK-08 – Implementar tratamento de falhas de login
 
-- [ ] Detectar usuário inexistente.
-- [ ] Detectar senha incorreta.
-- [ ] Exibir mensagens apropriadas.
+- [x] Detectar usuário inexistente.
+- [x] Detectar senha incorreta.
+- [x] Exibir mensagens apropriadas.
 
 ---
 
-### US03 – Consultar Saldo
+### TASK03 – Consultar Saldo
 
 #### TASK-09 – Implementar consulta de saldo
-- [ ] Recuperar saldo da conta.
-- [ ] Exibir valor atualizado.
+
+- [x] Recuperar saldo da conta.
+- [x] Exibir valor atualizado.
 
 #### TASK-10 – Proteger acesso à consulta
-- [ ] Verificar autenticação.
+
+- [x] Verificar autenticação.
 - [ ] Bloquear acesso não autorizado.
 
 ---
@@ -218,7 +220,7 @@ Crie um programa que simule o funcionamento básico de uma conta bancária.
 **Quero** abrir uma conta bancária informando meus dados cadastrais  
 **Para que** eu possa acessar os serviços bancários do sistema.
 
-#### Critérios de Aceitação
+#### US01 – Critérios de Aceitação
 
 - [x] O sistema deve solicitar os dados cadastrais obrigatórios.
 - [x] O sistema deve validar os dados informados.
@@ -234,12 +236,13 @@ Crie um programa que simule o funcionamento básico de uma conta bancária.
 **Quero** autenticar-me no sistema utilizando minhas credenciais  
 **Para que** eu possa acessar minha conta bancária.
 
-#### Critérios de Aceitação
-- O sistema deve solicitar usuário e senha.
-- O sistema deve validar as credenciais informadas.
-- O sistema deve permitir acesso quando as credenciais forem válidas.
-- O sistema deve negar acesso quando as credenciais forem inválidas.
-- O sistema deve exibir uma mensagem de erro em caso de falha na autenticação.
+#### US02 – Critérios de Aceitação
+
+- [x] O sistema deve solicitar email e senha.
+- [x] O sistema deve validar as credenciais informadas.
+- [x] O sistema deve permitir acesso quando as credenciais forem válidas.
+- [x] O sistema deve negar acesso quando as credenciais forem inválidas.
+- [x] O sistema deve exibir uma mensagem de erro em caso de falha na autenticação.
 
 ---
 
@@ -249,10 +252,11 @@ Crie um programa que simule o funcionamento básico de uma conta bancária.
 **Quero** consultar o saldo da minha conta  
 **Para que** eu possa acompanhar meus recursos financeiros.
 
-#### Critérios de Aceitação
-- Apenas clientes autenticados podem consultar saldo.
-- O sistema deve recuperar o saldo atual da conta.
-- O sistema deve exibir o saldo disponível ao cliente.
+#### US03 - Critérios de Aceitação
+
+- [x] Apenas clientes autenticados podem consultar saldo.
+- [x] O sistema deve recuperar o saldo atual da conta.
+- [x] O sistema deve exibir o saldo disponível ao cliente.
 
 ---
 

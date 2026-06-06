@@ -1,4 +1,5 @@
 #include "database.h"
+#include <stdio.h>
 
 bool emailIsUnique(char *email);
 
@@ -9,16 +10,16 @@ void newClientDatabase(int max_size) {
   clientDatabase->clients = calloc(max_size, sizeof(Client));
   clientDatabase->max_size = max_size;
   clientDatabase->size = 0;
-};
+}
 
 void destroyClientDatabase() {
   free(clientDatabase->clients);
   free(clientDatabase);
-};
+}
 
 void freeClientDatabase() {
   free(clientDatabase);
-};
+}
 
 void addClient(Client *newClient, int accountNumber) {
   if (clientDatabase->size == clientDatabase->max_size) {
@@ -36,7 +37,7 @@ void addClient(Client *newClient, int accountNumber) {
 
   clientDatabase->clients[clientDatabase->size] = *newClient;
   clientDatabase->size++;
-};
+}
   
 bool emailIsUnique(char *email) {
   for (int i = 0; i < clientDatabase->size; i++) {
@@ -45,4 +46,20 @@ bool emailIsUnique(char *email) {
     }
   }
   return true;
+}
+
+Client *getClientByEmail(char *inputEmail) {
+  if (clientDatabase->size == 0) {
+    printf("Banco de dados vazio\n");
+    return NULL;
+  }
+
+  for (int i = 0; i < clientDatabase->size; i++) {
+    if (strcmp(clientDatabase->clients[i].email, inputEmail) == 0) {
+      return &clientDatabase->clients[i];
+    }
+  }
+  
+  printf("Nenhuma conta encontrada\n");
+  return NULL;
 }

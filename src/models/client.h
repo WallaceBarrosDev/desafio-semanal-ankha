@@ -16,6 +16,8 @@ struct Client {
   char *name;
   char *email;
   char *password;
+
+  bool (*isValidPassword)(Client *client, char *inputPassword);
 };
 
 Client *newClient(char *name, char *email, char *password);

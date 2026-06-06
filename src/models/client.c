@@ -3,6 +3,7 @@
 bool nameIsValid(char *name);
 bool emailIsValid(char *email);
 bool passwordIsValid(char *password);
+bool isValidPassword(Client *client, char *inputPassword);
 
 Client *newClient(char *name, char *email, char *password) {
   Client *client = malloc(sizeof(Client));
@@ -29,6 +30,8 @@ Client *newClient(char *name, char *email, char *password) {
   client->email = email;
   client->password = password;
 
+  client->isValidPassword = isValidPassword;
+
   return client;
 }
 
@@ -46,4 +49,8 @@ bool emailIsValid(char *email) {
 
 bool passwordIsValid(char *password) {
   return strlen(password) >= 6;
+}
+
+bool isValidPassword(Client *client, char *inputPassword) {
+  return strcmp(client->password, inputPassword) == 0;
 }
