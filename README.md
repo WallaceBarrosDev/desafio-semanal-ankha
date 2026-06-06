@@ -125,38 +125,45 @@ Crie um programa que simule o funcionamento básico de uma conta bancária.
 ### US04 – Fazer Depósito
 
 #### TASK-11 – Implementar operação de depósito
-- [ ] Receber valor.
-- [ ] Validar valor informado.
-- [ ] Atualizar saldo.
+
+- [x] Receber valor.
+- [x] Validar valor informado.
+- [x] Atualizar saldo.
 
 #### TASK-12 – Validar valor do depósito
-- [ ] Impedir valores negativos.
-- [ ] Impedir valor zero.
+
+- [x] Impedir valores negativos.
+- [x] Impedir valor zero.
 
 #### TASK-13 – Confirmar operação
-- [ ] Exibir novo saldo.
-- [ ] Informar sucesso da operação.
+
+- [x] Exibir novo saldo.
+- [x] Informar sucesso da operação.
 
 ---
 
 ### US05 – Fazer Saque
 
 #### TASK-14 – Implementar operação de saque
-- [ ] Receber valor solicitado.
-- [ ] Verificar saldo.
-- [ ] Atualizar saldo.
+
+- [x] Receber valor solicitado.
+- [x] Verificar saldo.
+- [x] Atualizar saldo.
 
 #### TASK-15 – Implementar validação de saldo
-- [ ] Comparar saldo disponível.
-- [ ] Autorizar ou negar saque.
+
+- [x] Comparar saldo disponível.
+- [x] Autorizar ou negar saque.
 
 #### TASK-16 – Validar valor do saque
-- [ ] Impedir saque negativo.
-- [ ] Impedir saque igual a zero.
+
+- [x] Impedir saque negativo.
+- [x] Impedir saque igual a zero.
 
 #### TASK-17 – Confirmar operação
-- [ ] Exibir saldo atualizado.
-- [ ] Informar sucesso da operação.
+
+- [x] Exibir saldo atualizado.
+- [x] Informar sucesso da operação.
 
 ---
 
@@ -184,30 +191,26 @@ Crie um programa que simule o funcionamento básico de uma conta bancária.
 
 ---
 
-## Infraestrutura e Qualidade
+### Infraestrutura e Qualidade
 
 #### TASK-22 – Criar estrutura do projeto
-- [ ] Organizar diretórios.
-- [ ] Definir responsabilidades das classes.
+
+- [x] Organizar diretórios.
+- [x] Definir responsabilidades das classes.
 
 #### TASK-23 – Implementar persistência de dados
-- [ ] Salvar clientes.
-- [ ] Salvar contas.
-- [ ] Recuperar informações.
 
-#### TASK-24 – Criar testes unitários
-- [ ] Testar abertura de conta.
-- [ ] Testar login.
-- [ ] Testar consulta de saldo.
-- [ ] Testar depósito.
-- [ ] Testar saque.
-- [ ] Testar logout.
+- [x] Salvar clientes.
+- [x] Salvar contas.
+- [x] Recuperar informações.
 
-#### TASK-25 – Criar tratamento global de erros
+#### TASK-24 – Criar tratamento global de erros
+
 - [ ] Centralizar mensagens.
 - [ ] Padronizar exceções.
 
-#### TASK-26 – Documentar regras de negócio
+#### TASK-25 – Documentar regras de negócio
+
 - [ ] Fluxo de abertura de conta.
 - [ ] Fluxo de autenticação.
 - [ ] Fluxo de movimentação financeira.

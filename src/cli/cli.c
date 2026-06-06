@@ -70,6 +70,7 @@ void entrarConta() {
 
 void consultarSaldo(BankAccount *account);
 void depositarSaldo(BankAccount *account);
+void sacarSaldo(BankAccount *account);
 
 void secao(Client *client) {
   BankAccount *account = getAccount(client->accountNumber);
@@ -79,13 +80,15 @@ void secao(Client *client) {
   while(1) {
     printf("1 - Consultar saldo\n");
     printf("2 - Depositar saldo\n");
-    printf("3 - Sair da conta\n");
+    printf("3 - Sacar saldo\n");
+    printf("4 - Sair da conta\n");
     scanf("%d", &option);
 
     switch(option) {
       case 1: consultarSaldo(account); break;
       case 2: depositarSaldo(account); break;
-      case 3: printf("Saido de sua conta ...\n"); return;
+      case 3: sacarSaldo(account); break;
+      case 4: printf("Saido de sua conta ...\n"); return;
       default: printf("Opção invalida\n"); break;
     }
   }
@@ -110,4 +113,26 @@ void depositarSaldo(BankAccount *account) {
 
   account->balance += value;
   printf("Deposito realizado com sucesso\n");
+}
+
+void sacarSaldo(BankAccount *account) {
+  float value = 0.00;
+  
+  init:
+  printf("Digite o valor do saque\n(exemplo 200.00, por favor digite apenas 2 casas decimais)\n> ");
+  scanf("%f", &value);
+
+  if(value <= 0) {
+    printf("Por favor digite um valor maior que 0\n");
+    goto init;
+    return;
+  }
+
+  if(value > account->balance) {
+    printf("Saldo insuficiente\n");
+    return;
+  }
+
+  account->balance -= value;
+  printf("Saque de %.2f realizado com sucesso\n", value);
 }
