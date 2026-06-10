@@ -40,3 +40,4 @@ build-debug/%.o: src/%.c
 
 clean:
 	rm -rf build build-debug
+
