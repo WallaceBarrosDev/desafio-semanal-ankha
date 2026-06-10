@@ -1,46 +1,50 @@
-# ⚡ Desafio da Semana: Sistema de Situação Cadastral
+# 📚 Desafio da Semana: Sistema de Biblioteca
+Gerencie obras, clientes, empréstimos e reservas num sistema de terminal.
 
-## Notas
+tudo ficara documentado em document/
 
-No geral ta finalizado, so não tem uma interface muito agradavel.
+## Cada obra (livro ou revista) deve ter
+    Título, autor e código/ID
+    Gênero/tipo e quantidade de cópias
+    Status de disponibilidade
 
-### como rodar
+## Cada cliente deve ter
+    Nome, matrícula e situação (regular ou bloqueado)
 
-no linux basta abir o projeto e rodar o comando make
+## 👤 Atores do sistema
+    Bibliotecário — único usuário direto. Gerencia tudo.
+    Cliente — cadastrado no sistema. Pode ter empréstimos e reservas ativas.
 
-no windos voce deve baixar um compilador de C no windows e rodar ele apontando para a pasta src;
+## 📌 Menu do bibliotecário
+    [1] Emprestar obra a um cliente
+    [2] Registrar devolução
+    [3] Reservar obra indisponível
+    [4] Cancelar reserva
+    [5] Buscar obra por título, autor ou gênero
+    [6] Ver empréstimos e reservas de um cliente
+    [7] Cadastrar / remover obra ou cliente
+    [0] Sair
 
-ou se achar mais fácil, use uma IDE específica para C como o CODEBLOCKS;
-
-você pode tentar usar o VSCODE também, mas não recomendo;
-
-## Desafio
-
-Crie um programa que gerencie cadastros de pessoas.
-
-Cada cadastro deve possuir
-
-    • ID
-    • Nome da pessoa
-    • Situação financeira
-
-A situação pode ser
-
-    • “Pago”
-    • “Atrasado”
-
-## 📌 O programa deve ter as seguintes opções
-    • Ver todos os IDs cadastrados
-    • Procurar um ID específico
-    • Adicionar um novo cadastro
-    • Remover um cadastro
-
-## 📌 Ao procurar um ID, o programa deve mostrar
-    • ID
-    • Nome da pessoa
-    • Situação financeira
+## 📌 Regras de negócio
+    Prazo máximo de empréstimo: 7 dias
+    Multa de R$ 1,00 por dia de atraso na devolução
+    Máximo de 3 obras emprestadas por cliente ao mesmo tempo
+    Cliente com atraso não pode pegar nova obra
+    Reserva é cancelada automaticamente ao fazer o empréstimo
+    Obras podem ser removidas quando obsoletas ou danificadas
 
 ## ⭐ Bônus
-    - Permitir alterar a situação de uma pessoa
-    - Mostrar quantas pessoas estão “Pagas” e quantas estão “Atrasadas”
-    - Impedir IDs duplicados
+    Histórico completo de todos os empréstimos realizados
+    Alerta automático de clientes com devolução atrasada
+    Salvar e carregar dados em arquivo .txt ou .json
+    Relatório com a obra mais emprestada do sistema
+
+## 💻 Vale qualquer linguagem
+    Python, JS, Java, C, C++, C#, Go, Rust, PHP, Ruby, Kotlin, Swift...
+
+## 🎓 Bônus de Engenharia de Software só pra quem é GOAT mesmo🐐 🔥
+    ESW 01 — Análise do Problema: descreva o problema, stakeholders e objetivos antes de codificar
+    ESW 02 — Regras de Negócio (RN): liste e numere todas as regras (ex: RN01, RN02...)
+    ESW 03 — Especificação de Requisitos (ERS): separe Requisitos Funcionais (RF) e Não Funcionais (RNF)
+    ESW 04 — Casos de Uso (ECU): documente com ator, pré-condição e fluxo principal (ex: UC01 — Emprestar Obra)
+    ESW 05 — Protótipo de Telas: fluxo do sistema antes de implementar (papel, Figma, qualquer ferramenta)
