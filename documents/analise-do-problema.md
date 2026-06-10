@@ -1,22 +1,40 @@
 # Análise do Problema
 
-## descrição do problema
+## Descrição do Problema
+A biblioteca possui um acervo diversificado e em constante crescimento, composto por livros de diferentes categorias, autores e áreas de conhecimento. O controle manual dessas informações torna a administração do acervo mais complexa e sujeita a erros.
 
-uma biblioteca esta em crecimento, ela armazenda e gerencia muitos livro.
-a biblioteca precisa de um sistema para gerenciar seus livros e suas atividades.
+Além do gerenciamento do acervo, a biblioteca realiza empréstimos e reservas de livros para clientes previamente cadastrados. Essas operações exigem o controle da disponibilidade dos exemplares, dos prazos de empréstimo, das devoluções, das reservas e das possíveis penalidades por atraso.
 
-a biblioteca tem um acervo vasto de livros com diferentes caracteristicas, onde são devidamente classificados e organizados.
+Diante desse cenário, surge a necessidade de um sistema informatizado capaz de centralizar e automatizar as atividades da biblioteca, proporcionando maior eficiência na gestão do acervo e dos serviços oferecidos aos clientes.
 
-a biblioteca faz emprestimos de livros para pessoas cadastradas na biblioteca, ela tambem precisa gerenciar isso.
+## Stakeholders
 
-## stakeholders
+### Bibliotecários
+Responsáveis pela administração da biblioteca, incluindo:
 
-- bibliotecarios: gerenciam o acervo da biblioteca e gerenciam os emprestimos
-- clientes: fazem emprestimos e reservas
+    - Cadastro, atualização e remoção de obras do acervo;
+    - Controle de empréstimos, devoluções e reservas;
+    - Gerenciamento de clientes;
+    - Consulta de informações e relatórios relacionados ao acervo e às operações da biblioteca.
 
-## objetivos
+### Clientes
+Usuários cadastrados que utilizam os serviços da biblioteca, podendo:
 
-- gerenciar o acervo da biblioteca
-- gerenciar os clientes cadastrados na biblioteca
-- gerenciar os livros cadastrados na biblioteca
-- gerenciar os emprestimos e reservas de clientes cadastrados na biblioteca
+    - Consultar obras disponíveis;
+    - Realizar empréstimos;
+    - Realizar reservas;
+    - Acompanhar a situação de seus empréstimos e pendências.
+
+## Objetivos
+
+### Objetivo Geral
+Desenvolver um sistema para automatizar e gerenciar as operações de uma biblioteca, garantindo o controle eficiente do acervo, dos clientes e das atividades de empréstimo.
+
+### Objetivos Específicos
+    - Gerenciar o cadastro e a organização do acervo da biblioteca;
+    - Gerenciar o cadastro de clientes;
+    - Controlar a disponibilidade dos livros e exemplares;
+    - Registrar empréstimos, devoluções e renovações;
+    - Gerenciar reservas de obras;
+    - Controlar multas e pendências decorrentes de atrasos;
+    - Disponibilizar informações atualizadas sobre o acervo e as operações realizadas.
