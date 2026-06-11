@@ -11,5 +11,10 @@ Client *createNewClient(char *name) {
     return NULL;
   }
 
-  return NULL;
+  Client *client = malloc(sizeof(Client));
+  client->name = malloc(strlen(name) + 1);
+
+  strcpy(client->name, name);
+
+  return client;
 }
