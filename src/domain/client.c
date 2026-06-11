@@ -6,5 +6,10 @@ Client *createNewClient(char *name) {
     return NULL;
   }
 
+  if(strlen(name) < 4) {
+    throwException(EXCEPTION_INVALID_NAME, "invalid name");
+    return NULL;
+  }
+
   return NULL;
-};
+}
