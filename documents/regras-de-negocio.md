@@ -51,3 +51,8 @@
     - **RN36**: O sistema deve calcular automaticamente o valor total das multas devidas.
     - **RN37**: O pagamento da multa deve liberar o cliente para novas operações, após confirmação.
     - **RN38**: O cliente pode ser suspenso temporariamente em caso de reincidência de atraso ou dano ao acervo.
+
+## 8. Cadasto de clientes
+    - **RN39**: Cliente de possuir um Nome é Matricula.
+    - **RN40**: O nome do cliente deve ter no mínimo 4 caracteres.
+    - **RN41**: A matrícula é gerada automaticamente pelo sistema.
