@@ -28,21 +28,36 @@ START_TEST(test_null_name) {
 }
 END_TEST
 
-Suite *suite_client_name(void) {
-  Suite *s = suite_create("suite_client_name");
-  TCase *tc = tcase_create("core");
+// --- Suite Client REGISTRATION --- // 
 
-  tcase_add_test(tc, test_valid_name);
-  tcase_add_test(tc, test_invalid_name);
-  tcase_add_test(tc, test_null_name);
+START_TEST(test_registration_size_8) {
+  Client *c = createNewClient("Wallace");
+  ck_assert_ptr_nonnull(c);
+  ck_assert(c->registration >= 10000000 && c->registration <= 99999999);
+};
+END_TEST
 
-  suite_add_tcase(s, tc);
+Suite *suite_client(void) {
+  Suite *s = suite_create("suite_client");
+  
+  TCase *tc_name = tcase_create("name");
+  TCase *tc_registration = tcase_create("registration");
+
+  tcase_add_test(tc_name, test_valid_name);
+  tcase_add_test(tc_name, test_invalid_name);
+  tcase_add_test(tc_name, test_null_name);
+
+  tcase_add_test(tc_registration, test_registration_size_8);
+
+  suite_add_tcase(s, tc_name);
+  suite_add_tcase(s, tc_registration);
+
   return s;
 }
 
 int main(void) {
   
-  Suite *s = suite_client_name();
+  Suite *s = suite_client();
   SRunner *sr = srunner_create(s);
 
   srunner_run_all(sr, CK_NORMAL);
