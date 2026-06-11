@@ -1,12 +1,6 @@
 #include <check.h>
 #include "../src/exceptions/exceptions.h"
-
-typedef struct {
-} Client;
-
-Client *createNewClient(char *name) {
-  return NULL;
-}
+#include "../src/domain/client.h"
 
 // --- Suite Client Name ---  //
 
