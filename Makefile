@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -pedantic -Wall -Wextra -std=c11 -O2
 DEBUGFLAGS = -pedantic -Wall -Wextra -std=c11 -g -O0 -ffile-prefix-map=$(PWD)=$(PWD)
-TESTFLAGS = -pedantic -Wall -Wextra -std=c11 -g -O0
+TESTFLAGS = -pedantic -Wall -Wextra -std=c11 -g -O0 $(shell pkg-config --cflags cmocka)
 
 SRC     := $(shell find src -type f -name '*.c')
 TEST_SRC := $(shell find test -type f -name '*.c')
@@ -14,7 +14,6 @@ TEST_TEST_OBJ := $(patsubst test/%.c,build-test/%.o,$(TEST_SRC))
 .PHONY: all debug run run-debug run-test clean
 
 all: build/game
-
 debug: build-debug/game
 
 run: build/game
@@ -39,7 +38,7 @@ build-debug/game: $(DEBUG_OBJ)
 
 build-test/test: $(TEST_SRC_OBJ) $(TEST_TEST_OBJ)
 	@mkdir -p $(dir $@)
-	$(CC) $(TEST_SRC_OBJ) $(TEST_TEST_OBJ) -o $@ $(shell pkg-config --libs check)
+	$(CC) $(TEST_SRC_OBJ) $(TEST_TEST_OBJ) -o $@ $(shell pkg-config --libs cmocka)
 
 build/%.o: src/%.c
 	@mkdir -p $(dir $@)
@@ -51,11 +50,11 @@ build-debug/%.o: src/%.c
 
 build-test/%.o: src/%.c
 	@mkdir -p $(dir $@)
-	$(CC) $(TESTFLAGS) $(shell pkg-config --cflags check) -c $< -o $@
+	$(CC) $(TESTFLAGS) -c $< -o $@
 
 build-test/%.o: test/%.c
 	@mkdir -p $(dir $@)
-	$(CC) $(TESTFLAGS) $(shell pkg-config --cflags check) -c $< -o $@
+	$(CC) $(TESTFLAGS) -c $< -o $@
 
 clean:
 	rm -rf build build-debug build-test

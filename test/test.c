@@ -1,14 +1,17 @@
-#include <check.h>
+#include <cmocka.h>
 
 #include "suiteCliente.h"
+#include "suiteAPI.h"
 
 int main(void) {
-  
-  SRunner *sr = srunner_create(suite_client());
+  const struct CMUnitTest tests[] = {
+    cmocka_unit_test_setup(testValidName, setupClient),
+    cmocka_unit_test_setup(testInvalidName, setupClient),
+    cmocka_unit_test_setup(testNullName, setupClient),
+    cmocka_unit_test_setup(testRegistrationSize8, setupClient),
+    cmocka_unit_test_setup(testSaveValidClient, setupClient),
+    cmocka_unit_test_setup(testSaveNullClient, setupClient)
+  };
 
-  srunner_run_all(sr, CK_NORMAL);
-  int failed = srunner_ntests_failed(sr);
-  srunner_free(sr);
-  
-  return (failed == 0) ? 0 : 1;
+  return cmocka_run_group_tests(tests, NULL, NULL);
 }
