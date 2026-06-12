@@ -3,6 +3,8 @@
 
 #include "../exceptions/exceptions.h"
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
 
 typedef struct {
   char *name;

@@ -56,3 +56,5 @@
     - **RN39**: Cliente de possuir um Nome é Matricula.
     - **RN40**: O nome do cliente deve ter no mínimo 4 caracteres.
     - **RN41**: A matrícula é gerada automaticamente pelo sistema.
+    - **RN42**: A matrícula deve ser exclusivamente numérico.
+    - **RN43**: A matrícula deve ser composta por: (ano da matrícula) + (4 digitos aleatórios).
