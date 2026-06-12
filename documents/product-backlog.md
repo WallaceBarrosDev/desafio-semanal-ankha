@@ -16,9 +16,10 @@ quero cadastrar clientes,
 para permitir que utilizem os serviços da biblioteca.
 
     **Critérios de aceitação:**
-    - [ ] Cliente deve possuir nome e matrícula (RN39)
-    - [ ] Nome não pode ser vazio ou nulo (RN40)
-    - [ ] Matrícula gerada automaticamente pelo sistema (RN41)
+    - [x] Cliente deve possuir nome e matrícula (RN39)
+    - [x] Nome não pode ser vazio ou nulo (RN40)
+    - [x] Matrícula gerada automaticamente pelo sistema (RN41)
+    - [ ] Cliente de ser salvo com percistencia
     - [ ] Testes unitários cobrindo os critérios acima
     - [ ] Tela de cadastro funcional no terminal
 
