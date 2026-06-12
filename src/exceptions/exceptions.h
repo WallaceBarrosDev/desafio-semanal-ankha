@@ -13,6 +13,7 @@ typedef struct {
 } Exception;
 
 void throwException(ExceptionCode code, char *message);
-Exception getException();
+Exception getException(void);
+void resetException(void);
 
 #endif

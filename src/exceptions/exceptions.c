@@ -13,3 +13,8 @@ void throwException(ExceptionCode code, char *message) {
 Exception getException() {
   return exception;
 }
+
+void resetException() {
+  exception.code = EXCEPTION_NO_EXCEPTION;
+  exception.message = "no exception";
+}
