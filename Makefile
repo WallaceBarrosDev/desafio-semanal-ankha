@@ -8,9 +8,8 @@ TEST_SRC := $(shell find test -type f -name '*.c')
 
 OBJ       := $(patsubst src/%.c,build/%.o,$(SRC))
 DEBUG_OBJ := $(patsubst src/%.c,build-debug/%.o,$(SRC))
-TEST_SRC_OBJ := $(filter-out build-test/main.o, $(patsubst src/%.c,build-test/%.o,$(SRC)))
+TEST_SRC_OBJ := $(filter-out build-test/main.o build-test/repository/%, $(patsubst src/%.c,build-test/%.o,$(SRC)))
 TEST_TEST_OBJ := $(patsubst test/%.c,build-test/%.o,$(TEST_SRC))
-
 .PHONY: all debug run run-debug run-test clean
 
 all: build/game
