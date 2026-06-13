@@ -7,5 +7,7 @@
 int setupAPI(void **state);
 void testSaveValidClient(void **state);
 void testSaveNullClient(void **state);
+void testSaveClientWithoutRegistration(void **state);
+void testSaveClientWithoutName(void **state);
 
 #endif

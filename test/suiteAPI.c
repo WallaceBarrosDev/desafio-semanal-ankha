@@ -1,4 +1,5 @@
 #include "suiteAPI.h"
+#include <cmocka.h>
 
 // --- Setup Suite --- //
 
@@ -33,5 +34,19 @@ void testSaveValidClient(void **state) {
 void testSaveNullClient(void **state) {
     (void)state;
     saveNewClient(NULL);
+    assert_int_equal(getException().code, EXCEPTION_ARGUMENT_IS_NULL);
+}
+
+void testSaveClientWithoutRegistration(void **state) {
+    (void)state;
+    Client client = { .name = "Wallace", .registration = 0 };
+    saveNewClient(&client);
+    assert_int_equal(getException().code, EXCEPTION_INVALID_REGISTRATION);
+}
+
+void testSaveClientWithoutName(void **state) {
+    (void)state;
+    Client client = { .name = NULL, .registration = 12345678 };
+    saveNewClient(&client);
     assert_int_equal(getException().code, EXCEPTION_ARGUMENT_IS_NULL);
 }

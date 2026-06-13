@@ -10,7 +10,9 @@ int main(void) {
     cmocka_unit_test_setup(testNullName, setupClient),
     cmocka_unit_test_setup(testRegistrationSize8, setupClient),
     cmocka_unit_test_setup(testSaveValidClient, setupAPI),
-    cmocka_unit_test_setup(testSaveNullClient, setupAPI)
+    cmocka_unit_test_setup(testSaveNullClient, setupAPI),
+    cmocka_unit_test_setup(testSaveClientWithoutRegistration, setupAPI),
+    cmocka_unit_test_setup(testSaveClientWithoutName, setupAPI),
   };
 
   return cmocka_run_group_tests(tests, NULL, NULL);
