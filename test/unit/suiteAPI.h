@@ -2,7 +2,7 @@
 #define SUITEAPI_H
 
 #include <cmocka.h>
-#include "../src/api/saveNewClient.h"
+#include "../../src/api/saveNewClient.h"
 
 int setupAPI(void **state);
 void testSaveValidClient(void **state);

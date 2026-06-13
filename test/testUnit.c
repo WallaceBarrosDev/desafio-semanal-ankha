@@ -1,7 +1,7 @@
 #include <cmocka.h>
 
-#include "suiteCliente.h"
-#include "suiteAPI.h"
+#include "./unit/suiteCliente.h"
+#include "./unit/suiteAPI.h"
 
 int main(void) {
   const struct CMUnitTest tests[] = {
